@@ -26,17 +26,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn_search.setOnClickListener {
-            if (edit_search.text.toString().isNotEmpty()) {
-                beginSearch(edit_search.text.toString())
+        search.setOnClickListener {
+            if (searchText.text.toString().isNotEmpty()) {
+                search(searchText.text.toString())
                 val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                imm.hideSoftInputFromWindow(btn_search.windowToken, 0)
+                imm.hideSoftInputFromWindow(search.windowToken, 0)
             }
         }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun beginSearch(searchString: String) {
+    private fun search(searchString: String) {
         disposable = wikiApiServe.hitCountCheck(
                 searchString,
                 "b9a31dcb2d2b84843ea2eba6b48ff5f9",
@@ -80,6 +80,13 @@ class MainActivity : AppCompatActivity() {
         disposable?.dispose()
     }
 
+    fun getTime(milliSeconds: Long): String? {
+        return String.format(
+            " %02d:%02d",
+            ((milliSeconds / (1000 * 60 * 60)) % 24),
+            ((milliSeconds / (1000 * 60)) % 60)
+        )
+    }
 
     fun getDate(milliSeconds: Long, dateFormat: String?): String? {
         val formatter = SimpleDateFormat(dateFormat)
@@ -88,11 +95,5 @@ class MainActivity : AppCompatActivity() {
         return formatter.format(calendar.getTime())
     }
 
-    fun getTime(milliSeconds: Long): String? {
-        return String.format(
-                " %02d:%02d",
-                ((milliSeconds / (1000 * 60 * 60)) % 24),
-                ((milliSeconds / (1000 * 60)) % 60)
-        )
-    }
+
 }

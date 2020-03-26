@@ -1,0 +1,5 @@
+09.03 - 13.03 - opracowanie szkieletu aplikacji, analizą API, wstępne tworzenie projektu oraz interfejsu.
+
+16.03 - 19.03 - przygotowanie szaty graficznej aplikacji oraz układu interfejsu, opracowanie kodu programu, tworzenie połączenia z API.
+
+23.03 - 27.03 - Ostatnie poprawki desingu, sprawdzanie poprawności działania. Zakończenie pracy nad projektem.

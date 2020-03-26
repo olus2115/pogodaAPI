@@ -14,7 +14,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/btn_search"
+            android:id="@+id/search"
             android:layout_width="66dp"
             android:layout_height="57dp"
             android:layout_marginTop="16dp"
@@ -23,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/edit_search"
+            android:id="@+id/searchText"
             android:layout_width="273dp"
             android:layout_height="57dp"
             android:layout_marginTop="16dp"
