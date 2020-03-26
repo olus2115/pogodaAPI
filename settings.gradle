@@ -1,0 +1,2 @@
+rootProject.name='pogodynkaAPI'
+include ':app'

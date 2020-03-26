@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">pogodynkaAPI</string>
+    <string name="hint_search_string">Wpisz miejscowość</string>
+</resources>
